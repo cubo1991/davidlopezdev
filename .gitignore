@@ -23,10 +23,17 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 
 # local env files
 .env*.local
 .env
+=======
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+>>>>>>> bd4d5d8d3975d503c9c34756555260e529b8fa79
 
 # vercel
 .vercel
