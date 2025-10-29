@@ -3,6 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
+
 // Carga de fuentes
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +24,16 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata = {
   title: "David Lopez Dev",
   description: "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
+  keywords: "Desarrollador, Full-Stack, React, Node.js, Next.js, PostgreSQL",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {

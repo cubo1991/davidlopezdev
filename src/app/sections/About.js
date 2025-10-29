@@ -26,8 +26,7 @@ const About = () => {
             <div className="skill-item"><span>JavaScript</span></div>
             <div className="skill-item"><span>Node.js</span></div>
             <div className="skill-item"><span>PostgreSQL</span></div>
-            <div className="skill-item"><span>Next.js</span></div>
-            <div className="skill-item"><span>UI/UX</span></div>
+            <div className="skill-item"><span>Next.js</span></div>           
             <div className="skill-item"><span>Team coordination</span></div>
             <div className="skill-item"><span>Documentación técnica</span></div>
           </div>

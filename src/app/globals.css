@@ -382,6 +382,12 @@ p {
     font-size: 2rem;
   }
 }
+.verMas-link {
+  color: #60a5fa;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
 /* Services Section */
 .services-section {
@@ -778,3 +784,45 @@ p {
     gap: 1rem;
   }
 }
+.submit-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+/*Pop up modal*/
+   .popup-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 999;
+                }
+                .popup-box {
+                    background: #fff;
+                    padding: 2rem;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                }
+                button {
+                    margin-top: 1rem;
+                    padding: 0.5rem 1rem;
+                    background: #0070f3;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }

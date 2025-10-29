@@ -1,14 +1,17 @@
 import React from 'react';
-import service from "../data/projectsData";
+import service from "../data/servicesData";
 
 
 const Services = () => {
+    console.log(service);
+
     return (
         <section className="services-section">
             <div className="container">
                 <h2 className="services-title">Mis Servicios</h2>
                 <div className="services-grid">
                     {service.map((service) => (
+                        
                         <div key={service.id} className="service-card">
                             <div className="service-icon">
                                 {service.icon}
