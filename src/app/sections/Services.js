@@ -3,12 +3,12 @@ import service from "../data/servicesData";
 
 
 const Services = () => {
-    console.log(service);
+
 
     return (
         <section className="services-section">
             <div className="container">
-                <h2 className="services-title">Mis Servicios</h2>
+                <h1 className="services-title">Mis Servicios</h1>
                 <div className="services-grid">
                     {service.map((service) => (
                         

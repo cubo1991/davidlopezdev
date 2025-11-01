@@ -21,6 +21,14 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "700"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
+
+//Metadata
 export const metadata = {
   metadataBase: new URL("https://davidlopezdev.com.ar"), 
   title: {
@@ -69,7 +77,7 @@ export const metadata = {
     description:
       "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
     images: ["/android-chrome-192x192.png"],
-    creator: "David Lopez Mathez", // opcional
+    creator: "@dlopezmathez", // opcional
   },
 };
 

@@ -8,6 +8,6 @@ export default function robots() {
         allow: "/",     // permite rastrear todo
       },
     ],
-    sitemap: "https://davidlopezdev.com.ar/sitemap.xml", // 👈 tu sitemap real
+    sitemap: "https://davidlopezdev.com.ar/sitemap.xml", 
   };
 }
