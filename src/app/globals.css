@@ -50,7 +50,7 @@ body::before {
   gap: 1.5rem; /* espacio entre elementos */
 }
 
-#home h1 {
+#home h1, #home h2 {
   margin-bottom: 1.25rem;
 }
 
@@ -78,7 +78,7 @@ body::before {
   pointer-events: none;
 }
 
-h1 {
+h1, h2 {
   font-size: 4.5rem;
   font-weight: 900;
   letter-spacing: -1px;

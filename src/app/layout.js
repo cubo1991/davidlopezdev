@@ -22,9 +22,21 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "David Lopez Dev",
-  description: "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
-  keywords: "Desarrollador, Full-Stack, React, Node.js, Next.js, PostgreSQL",
+  metadataBase: new URL("https://davidlopezdev.com.ar"), 
+  title: {
+    default: "David Lopez Dev",
+    template: "%s | David Lopez Dev",
+  },
+  description:
+    "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
+  keywords: [
+    "Desarrollador",
+    "Full-Stack",
+    "React",
+    "Node.js",
+    "Next.js",
+    "PostgreSQL",
+  ],
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -34,6 +46,31 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+  openGraph: {
+    title: "David Lopez Dev",
+    description:
+      "Explora mis proyectos web modulares, escalables y con foco en UX.",
+    url: "https://davidlopezdev.com.ar",
+    siteName: "David Lopez Dev",
+    images: [
+      {
+        url: "/android-chrome-192x192.png",
+        width: 192,
+        height: 192,
+        alt: "Logo de David López Dev",
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "David Lopez Dev",
+    description:
+      "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
+    images: ["/android-chrome-192x192.png"],
+    creator: "David Lopez Mathez", // opcional
+  },
 };
 
 export default function RootLayout({ children }) {
