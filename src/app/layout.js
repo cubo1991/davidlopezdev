@@ -3,8 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
-
-// Carga de fuentes
+// Fuentes
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,16 +20,16 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "700"],
 });
 
+// ✅ Viewport
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
 };
 
-
-//Metadata
+// ✅ Metadata global
 export const metadata = {
-  metadataBase: new URL("https://davidlopezdev.com.ar"), 
+  metadataBase: new URL("https://davidlopezdev.com.ar"),
   title: {
     default: "David Lopez Dev",
     template: "%s | David Lopez Dev",
@@ -77,13 +76,33 @@ export const metadata = {
     description:
       "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
     images: ["/android-chrome-192x192.png"],
-    creator: "@dlopezmathez", // opcional
+    creator: "@dlopezmathez",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "David Lopez Dev",
+              url: "https://www.davidlopezdev.com.ar",
+              logo: "https://www.davidlopezdev.com.ar/android-chrome-192x192.png",
+              sameAs: [
+                "https://www.linkedin.com/in/david-lopez-mathez/",
+                "https://github.com/cubo1991",
+                "https://twitter.com/dlopezmathez",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}
       >
