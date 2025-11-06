@@ -13,13 +13,19 @@ export default function sitemap() {
             priority: 0.8,
         },
         {
-            url: 'https://davidlopezdev.com.ar/projects',
+            url: 'https://davidlopezdev.com.ar/proyectos',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.5,
         },
         {
-            url: 'https://davidlopezdev.com.ar/contact',
+            url: 'https://davidlopezdev.com.ar/contacto',
+            lastModified: new Date(),
+            changeFrequency: 'yearly',
+            priority: 0.3,
+        },
+            {
+            url: 'https://davidlopezdev.com.ar/servicios',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
