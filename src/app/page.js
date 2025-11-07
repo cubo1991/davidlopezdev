@@ -31,10 +31,10 @@ export default function Home() {
         Soluciones técnicas con impacto real. Desde DNS hasta UI modular, todo listo para producción.
       </p>
       <div className="flex gap-4">
-        <Link href="/servicios" className="btn-primary  border border-white  text-white px-6 py-2 rounded transition">
+        <Link href="/servicios" className="btn-primary border border-white text-white px-6 py-2 rounded transition no-underline active:text-white active:no-underline focus:text-white focus:no-underline visited:text-white visited:no-underline">
           Ver Servicios
         </Link>
-        <Link href="/contacto" className="btn-primary border border-white text-white px-6 py-2 rounded transition">
+        <Link href="/contacto" className="btn-primary border border-white text-white px-6 py-2 rounded transition no-underline active:text-white active:no-underline focus:text-white focus:no-underline visited:text-white visited:no-underline">
           Contactame
         </Link>
       </div>
