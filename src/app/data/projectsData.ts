@@ -1,4 +1,10 @@
-const projects = [
+export interface Project {
+  title: string;
+  description: string;
+  link: string;
+}
+
+const projects: Project[] = [
   {
     title: "Directorio empresarial navegable",
     description:
@@ -23,6 +29,12 @@ const projects = [
       "Aplicación que muestra el clima actual usando una API externa. Manejo de estados, diseño responsivo y estructura clara para proyectos informativos. Proyecto: WeatherApp.",
     link: "https://youtu.be/UpU9lYdXyYM",
   },
+  {
+    title: "Filler de pdf para Pokemon VGC",
+    description:
+      "Aplicación para rellenar PDFs de torneos de Pokemon VGC. Interfaz intuitiva y generación de documentos listos para imprimir. Proyecto: PokemonVGC-Filler.",
+    link: "https://pokefiller-web.vercel.app/",
+  }
 ];
 
 export default projects;

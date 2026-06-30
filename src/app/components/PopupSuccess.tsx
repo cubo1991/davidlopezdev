@@ -1,6 +1,11 @@
 import React from 'react';
 
-const PopupSuccess = ({ visible, onClose }) => {
+interface PopupSuccessProps {
+    visible: boolean;
+    onClose: () => void;
+}
+
+const PopupSuccess = ({ visible, onClose }: PopupSuccessProps) => {
     if (!visible) return null;
 
     return (

@@ -1,4 +1,13 @@
-const services = [
+export interface Service {
+  title: string;
+  description: string;
+  link: string;
+  icon: JSX.Element;
+  id?: string;
+  features?: string[];
+}
+
+const services: Service[] = [
   {
     title: "Directorio empresarial",
     description:

@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
@@ -13,14 +15,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 // ✅ Viewport
-export const viewport = {
+export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
 };
 
 // ✅ Metadata global
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL("https://davidlopezdev.com.ar"),
   title: {
     default: "David Lopez Dev",
@@ -72,7 +74,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <head>

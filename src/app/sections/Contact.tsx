@@ -14,7 +14,7 @@ const Contact = () => {
         message: ''
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -23,7 +23,7 @@ const Contact = () => {
 
 
 
-const handleSubmit = (e) => {
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs.send(
@@ -93,6 +93,7 @@ const handleSubmit = (e) => {
                             <textarea
                                 id="message"
                                 name="message"
+                                // @ts-ignore rows acepta number en React; se preserva el valor original "5"
                                 rows="5"
                                 value={formData.message}
                                 onChange={handleChange}

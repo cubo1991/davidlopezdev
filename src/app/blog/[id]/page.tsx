@@ -2,11 +2,11 @@
     import { notFound } from "next/navigation";
     import {getPostBySlug } from "../../data/sheets";
     import ReactMarkdown from "react-markdown";
-    
+
     import rehypeRaw from "rehype-raw";
 
 
-    export default async function PostPage({ params }) {
+    export default async function PostPage({ params }: { params: Promise<{ id: string }> }) {
     const resolvedParams = await params;
     const post = await getPostBySlug(resolvedParams.id);
     if (!post) return notFound();

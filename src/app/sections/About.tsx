@@ -34,6 +34,7 @@ const About = () => {
 
         <div className="about-image">
           <div className="about-photo" style={{ position: 'relative', overflow: 'hidden' }}>
+  {/* @ts-ignore: layout/objectFit son props legacy de next/image, se preserva el comportamiento actual */}
   <Image
     src={profilePic}
     alt="David López"

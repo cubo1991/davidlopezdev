@@ -1,6 +1,7 @@
+import type { Metadata } from "next";
 import Services from "../sections/Services";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Servicios | David López",
   description: "Listado de servicios ofrecidos, incluyendo desarrollo web y consultoría.",
   openGraph: {

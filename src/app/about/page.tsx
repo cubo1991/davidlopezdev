@@ -1,6 +1,7 @@
+import type { Metadata } from "next";
 import About from "../sections/About";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Sobre mí | David López",
   description: "Conoce más sobre mí y mi experiencia en desarrollo web.",
   openGraph: {

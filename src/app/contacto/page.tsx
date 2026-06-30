@@ -1,6 +1,7 @@
+import type { Metadata } from "next";
 import Contact from "../sections/Contact";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contacto | David López",
   description: "Ponte en contacto conmigo para consultas y colaboraciones.",
   openGraph: {

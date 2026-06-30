@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "../data/sheets";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Blog | David López",
   description: "Ponete en contacto conmigo para consultas y colaboraciones.",
   openGraph: {

@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Inicio | David López",
   description: "Desarrollador Full-Stack y Consultor Técnico. Soluciones técnicas con impacto real, desde DNS hasta UI modular, todo listo para producción.",
   openGraph: {

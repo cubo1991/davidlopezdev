@@ -1,6 +1,6 @@
 // src/app/blog/[id]/page.js
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "../../data/sheets";
+import { getAllPosts, getPostBySlug } from "../data/sheets";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 

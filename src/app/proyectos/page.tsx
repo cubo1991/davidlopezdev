@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import Projects from "../sections/Projects";
 
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Proyectos | David López",
   description: "Listado de proyectos desarrollados con Next.js, React y TypeScript.",
   openGraph: {
