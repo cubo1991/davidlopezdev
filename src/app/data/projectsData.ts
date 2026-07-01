@@ -15,7 +15,7 @@ const projects: Project[] = [
     title: "Landing técnica con diseño responsivo",
     description:
       "Landing page con layout adaptable, jerarquía visual clara y componentes reutilizables. Animaciones suaves y estructura lista para integrar en proyectos técnicos. Proyecto: allNewCosmicapp.",
-    link: "https://all-new-cosmicapp.vercel.app/",
+    link: "https://cosmicapp2026.vercel.app/",
   },
   {
     title: "Selector visual con lógica condicional",
