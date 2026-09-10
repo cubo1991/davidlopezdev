@@ -12,7 +12,7 @@
                     <div className="services-grid">
                         {service.map((service) => (
                             
-                            <div key={service.id} className="service-card">
+                            <div key={service.title} className="service-card">
                                 <div className="service-icon">
                                     {service.icon}
                                 </div>

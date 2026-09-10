@@ -14,7 +14,7 @@
     
 
      return (
-    <div className="prose prose-invert max-w-none blog-post">
+    <div className="blog-post">
       <h1>{post.title}</h1>
       <p>{post.date} - {post.author}</p>
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>
