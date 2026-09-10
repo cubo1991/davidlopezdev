@@ -31,6 +31,8 @@ export default function Home() {
       <p>
         Soluciones técnicas con impacto real. Desde DNS hasta UI modular, todo listo para producción.
       </p>
+      {/* Los dos botones van pegados a propósito (decisión de David, 2026-09-10).
+          No agregarles separación: no es un resto de las clases de Tailwind que se sacaron. */}
       <div>
         <Link href="/servicios" className="btn-primary">
           Ver Servicios
