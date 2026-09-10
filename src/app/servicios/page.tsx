@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Services from "../sections/Services";
+import SolucionesComercios from "../sections/SolucionesComercios";
 
 export const metadata: Metadata = {
   title: "Servicios | David López",
@@ -24,5 +25,11 @@ export const metadata: Metadata = {
 
 
 export default function ServicesPage() {
-  return <Services/>;
+  return (
+    <>
+      <SolucionesComercios />
+      <hr className="comercios-separador" />
+      <Services />
+    </>
+  );
 }

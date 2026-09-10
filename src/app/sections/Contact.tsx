@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import emailjs from 'emailjs-com';
 import PopupSuccess from '../components/PopupSuccess';
 
@@ -7,11 +8,15 @@ import PopupSuccess from '../components/PopupSuccess';
 
 
 const Contact = () => {
+    const desdeComercios = useSearchParams().get('de') === 'comercios';
     const [showPopup, setShowPopup] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [error, setError] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        origen: desdeComercios ? 'soluciones-comercios' : 'sitio'
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,18 +30,25 @@ const Contact = () => {
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (sending) return;
+
+    setSending(true);
+    setError(false);
 
     emailjs.send(
         'service_a8up7zb',
         'template_0o77t3c',
         formData,
         'gJ13A5gEjdoEbmU3h'
-    ).then((result) => {
-        console.log('Email enviado:', result.text);
-          setShowPopup(true);
-        setFormData({ name: '', email: '', message: '' }); // opcional: limpiar campos
-    }).catch((error) => {
-        console.error('Error al enviar:', error.text);
+    ).then(() => {
+        setShowPopup(true);
+        // se conserva el origen para que una segunda consulta siga atribuida igual
+        setFormData({ name: '', email: '', message: '', origen: formData.origen });
+    }).catch((err) => {
+        console.error('Error al enviar:', err?.text ?? err);
+        setError(true);
+    }).finally(() => {
+        setSending(false);
     });
 };
 
@@ -93,16 +105,25 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                             <textarea
                                 id="message"
                                 name="message"
-                                // @ts-ignore rows acepta number en React; se preserva el valor original "5"
-                                rows="5"
+                                rows={5}
+                                placeholder={desdeComercios
+                                    ? 'Contame qué rubro tenés y qué es lo que más tiempo te come hoy.'
+                                    : undefined}
                                 value={formData.message}
                                 onChange={handleChange}
                                 required
                             ></textarea>
                         </div>
                         
-                        <button type="submit" className="submit-btn">
-                            Enviar Mensaje
+                        {error && (
+                            <p className="form-error" role="alert">
+                                No pudimos enviar tu mensaje. Escribime directo a
+                                {' '}adavidlopezmathez@gmail.com o al +54 261 664 9039.
+                            </p>
+                        )}
+
+                        <button type="submit" className="submit-btn" disabled={sending}>
+                            {sending ? 'Enviando...' : 'Enviar Mensaje'}
                         </button>
                     </form>
                 </div>

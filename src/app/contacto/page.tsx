@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Contact from "../sections/Contact";
 
 export const metadata: Metadata = {
@@ -24,5 +25,10 @@ export const metadata: Metadata = {
 
 
 export default function ContactPage() {
-  return <Contact/>;
+  // Suspense: Contact lee ?de=comercios con useSearchParams y sin esto Next no puede prerenderizar la página.
+  return (
+    <Suspense>
+      <Contact />
+    </Suspense>
+  );
 }

@@ -922,3 +922,144 @@ p {
   transition: color 0.3s ease;
 }
 
+/* Soluciones para Comercios */
+.comercios-section {
+  padding: 5rem 1rem 3rem;
+  background: transparent;
+}
+
+.comercios-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.comercios-bajada {
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  color: #e4e6eb;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.comercios-intro {
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Las tarjetas no son clicleables: se apaga el efecto de "levantar" de .service-card
+   para que no se lean como botones. */
+.comercios-card {
+  text-align: left;
+}
+
+.comercios-card:hover {
+  transform: none;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.comercios-card h3 {
+  color: #f4f5f7;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+/* .comercios-card .comercios-rubros: hace falta la especificidad extra porque
+   .service-card p ya fija el color y le ganaba a la clase sola. */
+.comercios-card .comercios-rubros {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.comercios-card p {
+  margin-bottom: 0;
+}
+
+.comercios-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.comercios-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.875rem 1.75rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+  transition: background 0.3s ease;
+}
+
+.comercios-btn:hover,
+.comercios-btn:visited,
+.comercios-btn:active,
+.comercios-btn:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.comercios-btn:hover {
+  background: #2563eb;
+}
+
+.comercios-btn:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.comercios-separador {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Estado de error del formulario de contacto */
+.form-error {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .comercios-title {
+    font-size: 1.6rem;
+  }
+
+  .comercios-bajada {
+    font-size: 1.05rem;
+  }
+
+  .comercios-btn {
+    width: 100%;
+  }
+}
