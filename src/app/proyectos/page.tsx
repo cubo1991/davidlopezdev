@@ -1,24 +1,17 @@
 import type { Metadata } from "next";
 import Projects from "../sections/Projects";
 
-
 export const metadata: Metadata = {
-  title: "Proyectos | David López",
-  description: "Listado de proyectos desarrollados con Next.js, React y TypeScript.",
+  title: "Proyectos",
+  description: "Proyectos reales con stack, rol y enlaces: Next.js, React, TypeScript, FastAPI, PostgreSQL y Firebase.",
+  alternates: { canonical: "/proyectos" },
   openGraph: {
-    title: "Proyectos | David López",
-    description: "Explora mis proyectos web modulares y escalables.",
-    url: "https://www.davidlopezdev.com.ar/proyectos",
-    siteName: "David López Dev",
-    images: [
-      {
-        url: "/public/favicon.ico",
-        width: 192,
-        height: 192,
-        alt: "Logo de David López Dev",
-      },
-    ],
-    locale: "es_ES",
+    title: "Proyectos | David Lopez Dev",
+    description: "Proyectos reales con stack, rol y enlaces: Next.js, React, TypeScript, FastAPI, PostgreSQL y Firebase.",
+    url: "/proyectos",
+    siteName: "David Lopez Dev",
+    locale: "es_AR",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "David López, desarrollador full-stack" }],
     type: "website",
   },
 };

@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# davidlopezdev
 
-## Getting Started
+Sitio personal de David López, desarrollador full-stack (Mendoza, Argentina): proyectos, servicios, blog y formulario de contacto. Producción: https://davidlopezdev.com.ar
 
-First, run the development server:
+## Stack
+
+- Next.js 15 (App Router) + React 18 + TypeScript
+- CSS propio (`src/app/globals.css`), fuente Space Grotesk vía `next/font`
+- Formulario de contacto con EmailJS (`emailjs-com`)
+- Blog: los posts se leen de una hoja de Google Sheets publicada como CSV (`src/app/data/sheets.ts`) y se renderizan con `react-markdown` (sin HTML crudo)
+- SEO: `sitemap.ts`, `robots.ts`, imagen Open Graph estática en `public/og.png` (1200x630), JSON-LD `Person` en `layout.tsx`
+
+## Cómo correrlo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run lint
+npx tsc --noEmit
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variables de entorno
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+No hay variables de entorno: el sitio no lee ningún `.env`. Los valores están hardcodeados en el código:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/sections/Contact.tsx`: service, template y public key de EmailJS (las public keys de EmailJS son públicas por diseño).
+- `src/app/data/sheets.ts`: URL del CSV publicado de Google Sheets con los posts.
 
-## Learn More
+Si querés sacarlos del código, pasalos a `NEXT_PUBLIC_*` (EmailJS) y a una variable de servidor (`SHEET_CSV_URL`).
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/app/
+  page.tsx, about/, proyectos/, servicios/, contacto/, blog/   rutas
+  sections/        secciones de cada página
+  data/            proyectos, servicios y lectura del blog
+  components/      navbar y popup de éxito
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Los proyectos (`src/app/data/projectsData.ts`) llevan stack y rol; si agregás uno, verificá el stack contra el repo real.

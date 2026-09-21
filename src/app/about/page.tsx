@@ -2,26 +2,19 @@ import type { Metadata } from "next";
 import About from "../sections/About";
 
 export const metadata: Metadata = {
-  title: "Sobre mí | David López",
-  description: "Conoce más sobre mí y mi experiencia en desarrollo web.",
+  title: "Sobre mí",
+  description: "Desarrollador full-stack en Mendoza, Argentina. Mi experiencia en desarrollo web, frontend y backend.",
+  alternates: { canonical: "/about" },
   openGraph: {
-    title: "Sobre mí | David López",
-    description: "Conoce más sobre mí y mi experiencia en desarrollo web.",
-    url: "https://www.davidlopezdev.com.ar/about",
-    siteName: "David López Dev",
-    images: [
-      {
-        url: "/public/favicon.ico",
-        width: 192,
-        height: 192,
-        alt: "Logo de David López Dev",
-      },
-    ],
-    locale: "es_ES",
+    title: "Sobre mí | David Lopez Dev",
+    description: "Desarrollador full-stack en Mendoza, Argentina. Mi experiencia en desarrollo web, frontend y backend.",
+    url: "/about",
+    siteName: "David Lopez Dev",
+    locale: "es_AR",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "David López, desarrollador full-stack" }],
     type: "website",
   },
 };
-
 
 export default function AboutPage() {
   return <About/>;

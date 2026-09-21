@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "davidlopezdev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,21 +10,20 @@
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^10.16.4",
     "next": "15.0.5",
     "papaparse": "^5.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-markdown": "^8.0.7",
-    "rehype-raw": "^6.0.0"
+    "react-markdown": "^8.0.7"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
     "@types/node": "^26.0.1",
     "@types/papaparse": "^5.5.2",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "15.0.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.0.5",
     "typescript": "^6.0.3"
   }
 }

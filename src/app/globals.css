@@ -682,14 +682,16 @@ p {
   font-size: 0.9rem;
 }
 
-.project-card .tech-stack {
+.project-card .tech-stack,
+.service-card .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
-.project-card .tech-tag {
+.project-card .tech-tag,
+.service-card .tech-tag {
   background: rgba(59, 130, 246, 0.2);
   color: #60a5fa;
   padding: 0.25rem 0.75rem;
@@ -1459,4 +1461,49 @@ p {
   .comercios-btn {
     width: 100%;
   }
+}
+
+/* Accesibilidad: foco visible en links, botones y burger (el reset dejaba solo el foco por defecto) */
+a:focus-visible,
+button:focus-visible,
+.btn-primary:focus-visible,
+.link:focus-visible,
+.burger:focus-visible,
+.verMas-link:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* Menú móvil cerrado: fuera del orden de tabulación */
+@media (max-width: 768px) {
+  .links:not(.open) {
+    visibility: hidden;
+  }
+}
+
+.project-card .project-role {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.contact-item a {
+  text-decoration: underline;
+}
+
+.services-intro {
+  text-align: center;
+  color: #cbd5e1;
+  max-width: 640px;
+  margin: -1.5rem auto 3rem;
+}
+
+.service-card .service-proyectos {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.service-card .tech-stack {
+  justify-content: center;
 }

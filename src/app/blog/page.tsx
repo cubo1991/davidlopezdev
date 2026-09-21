@@ -3,22 +3,16 @@ import Link from "next/link";
 import { getAllPosts } from "../data/sheets";
 
 export const metadata: Metadata = {
-  title: "Blog | David López",
-  description: "Ponete en contacto conmigo para consultas y colaboraciones.",
+  title: "Blog",
+  description: "Artículos sobre desarrollo web.",
+  alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Blog | David López",
-    description: "Ponte en blog conmigo para consultas y colaboraciones.",
-    url: "https://www.davidlopezdev.com.ar/blog",
-    siteName: "David López Dev",
-    images: [
-      {
-        url: "/public/favicon.ico",
-        width: 192,
-        height: 192,
-        alt: "Logo de David López Dev",
-      },
-    ],
-    locale: "es_ES",
+    title: "Blog | David Lopez Dev",
+    description: "Artículos sobre desarrollo web.",
+    url: "/blog",
+    siteName: "David Lopez Dev",
+    locale: "es_AR",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "David López, desarrollador full-stack" }],
     type: "website",
   },
 };

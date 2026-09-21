@@ -10,11 +10,11 @@ const About = () => {
       <div className="about-content">
         <div className="about-text">
           <p>
-            Soy David López, consultor técnico y desarrollador full-stack. Me especializo en crear soluciones web claras, modulares y profesionales, con foco en la experiencia del usuario y la calidad estructural del código. Cada proyecto que entrego está pensado para escalar, integrarse fácilmente y mantenerse en el tiempo.
+            Soy David López, desarrollador full-stack en Mendoza, Argentina. Trabajo de punta a punta: modelo de datos y API con FastAPI y PostgreSQL, interfaz con React, Next.js y TypeScript, y despliegue en Vercel o Render. Mis proyectos más completos son un tracker de postulaciones con backend con JWT y tests, y una app de gestión de torneos sobre Firebase.
           </p>
 
           <p>
-            Trabajo tanto en frontend como en backend, combinando diseño responsivo, jerarquía visual y lógica robusta. Me obsesiona la estabilidad visual, la navegación fluida y los detalles que hacen que una interfaz se sienta profesional. No me conformo con que “funcione”: tiene que sentirse bien.
+            Me importa que la interfaz sea estable y fluida, y que los casos que importan tengan tests: en TrackFolio, por ejemplo, los de autenticación y aislamiento entre usuarios. El código de la mayoría de mis proyectos está a la vista en GitHub (cubo1991).
           </p>
 
           <p>
@@ -24,9 +24,10 @@ const About = () => {
           <div className="skills-grid">
             <div className="skill-item"><span>React</span></div>
             <div className="skill-item"><span>JavaScript</span></div>
-            <div className="skill-item"><span>Node.js</span></div>
             <div className="skill-item"><span>PostgreSQL</span></div>
-            <div className="skill-item"><span>Next.js</span></div>           
+            <div className="skill-item"><span>Next.js</span></div>
+            <div className="skill-item"><span>TypeScript</span></div>
+            <div className="skill-item"><span>FastAPI</span></div>
             <div className="skill-item"><span>Team coordination</span></div>
             <div className="skill-item"><span>Documentación técnica</span></div>
           </div>

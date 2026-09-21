@@ -27,14 +27,14 @@ export default function SolucionesComercios() {
   return (
     <section id="comercios" className="comercios-section">
       <div className="container">
-        <h2 className="comercios-title">Soluciones para Comercios</h2>
+        <h2 className="comercios-title">También trabajo con comercios y pymes</h2>
 
         <p className="comercios-bajada">
           Sistemas simples y a medida para que tu negocio deje atrás el cuaderno y el Excel.
         </p>
 
         <p className="comercios-intro">
-          Trabajo con comercios chicos y medianos para digitalizar lo que hoy se hace a mano: turnos,
+          Como trabajo freelance adicional, colaboro con comercios chicos y medianos para digitalizar lo que hoy se hace a mano: turnos,
           stock, pedidos, fichas de clientes. Cada sistema se arma a la medida del negocio,
           arrancando simple, y sumando funciones cuando el comercio crece. Sin pagar de más por cosas
           que no vas a usar.

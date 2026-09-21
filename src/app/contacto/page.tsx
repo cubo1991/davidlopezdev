@@ -3,22 +3,16 @@ import { Suspense } from "react";
 import Contact from "../sections/Contact";
 
 export const metadata: Metadata = {
-  title: "Contacto | David López",
-  description: "Ponte en contacto conmigo para consultas y colaboraciones.",
+  title: "Contacto",
+  description: "Escribime para hablar de un puesto, un proyecto o una colaboración.",
+  alternates: { canonical: "/contacto" },
   openGraph: {
-    title: "Contacto | David López",
-    description: "Ponte en contacto conmigo para consultas y colaboraciones.",
-    url: "https://www.davidlopezdev.com.ar/contacto",
-    siteName: "David López Dev",
-    images: [
-      {
-        url: "/public/favicon.ico",
-        width: 192,
-        height: 192,
-        alt: "Logo de David López Dev",
-      },
-    ],
-    locale: "es_ES",
+    title: "Contacto | David Lopez Dev",
+    description: "Escribime para hablar de un puesto, un proyecto o una colaboración.",
+    url: "/contacto",
+    siteName: "David Lopez Dev",
+    locale: "es_AR",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "David López, desarrollador full-stack" }],
     type: "website",
   },
 };
