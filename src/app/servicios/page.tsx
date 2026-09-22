@@ -3,22 +3,16 @@ import Services from "../sections/Services";
 import SolucionesComercios from "../sections/SolucionesComercios";
 
 export const metadata: Metadata = {
-  title: "Servicios | David López",
-  description: "Listado de servicios ofrecidos, incluyendo desarrollo web y consultoría.",
+  title: "Qué hago",
+  description: "Áreas de trabajo de un desarrollador full-stack: frontend, backend y datos, automatización e IA aplicada, infraestructura y despliegue.",
+  alternates: { canonical: "/servicios" },
   openGraph: {
-    title: "Servicios | David López",
-    description: "Explora mis servicios de desarrollo web y consultoría.",
-    url: "https://www.davidlopezdev.com.ar/servicios",
-    siteName: "David López Dev",
-    images: [
-      {
-        url: "/public/favicon.ico",
-        width: 192,
-        height: 192,
-        alt: "Logo de David López Dev",
-      },
-    ],
-    locale: "es_ES",
+    title: "Qué hago | David Lopez Dev",
+    description: "Áreas de trabajo de un desarrollador full-stack: frontend, backend y datos, automatización e IA aplicada, infraestructura y despliegue.",
+    url: "/servicios",
+    siteName: "David Lopez Dev",
+    locale: "es_AR",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "David López, desarrollador full-stack" }],
     type: "website",
   },
 };
@@ -27,9 +21,9 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <SolucionesComercios />
-      <hr className="comercios-separador" />
       <Services />
+      <hr className="comercios-separador" />
+      <SolucionesComercios />
     </>
   );
 }

@@ -19,7 +19,9 @@ export default function Navbar() {
 
       <button
         className="burger"
-        aria-label="Toggle navigation"
+        aria-label={open ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+        aria-expanded={open}
+        aria-controls="nav-links"
         onClick={() => setOpen(!open)}
       >
         <span />
@@ -27,7 +29,7 @@ export default function Navbar() {
         <span />
       </button>
 
-      <nav className={`links ${open ? "open" : ""}`}>
+      <nav id="nav-links" aria-label="Principal" className={`links ${open ? "open" : ""}`}>
         {LINKS.map(({ href, label }) => (
           <Link
             key={href}

@@ -1,13 +1,10 @@
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 
 // Fuentes
-
-
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
@@ -18,24 +15,26 @@ const spaceGrotesk = Space_Grotesk({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
 };
 
 // ✅ Metadata global
+// Host canónico: sin www. Las páginas definen alternates.canonical y openGraph.url
+// relativos (se resuelven con metadataBase). og:image: /og.png (1200x630, public/). Cada página con openGraph propio la repite (Next no la hereda).
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidlopezdev.com.ar"),
   title: {
-    default: "David Lopez Dev",
+    default: "David Lopez Dev | Desarrollador full-stack",
     template: "%s | David Lopez Dev",
   },
   description:
-    "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
+    "Desarrollador full-stack en Mendoza, Argentina. Del modelo de datos a la interfaz: React, Next.js, TypeScript, FastAPI y PostgreSQL.",
   keywords: [
     "Desarrollador",
     "Full-Stack",
     "React",
-    "Node.js",
     "Next.js",
+    "TypeScript",
+    "FastAPI",
     "PostgreSQL",
   ],
   icons: {
@@ -48,28 +47,17 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "David Lopez Dev",
+    title: "David Lopez Dev | Desarrollador full-stack",
     description:
-      "Explora mis proyectos web modulares, escalables y con foco en UX.",
-    url: "https://davidlopezdev.com.ar",
+      "Del modelo de datos a la interfaz: proyectos reales con React, Next.js, TypeScript, FastAPI y PostgreSQL.",
     siteName: "David Lopez Dev",
-    images: [
-      {
-        url: "/android-chrome-192x192.png",
-        width: 192,
-        height: 192,
-        alt: "Logo de David López Dev",
-      },
-    ],
-    locale: "es_ES",
+    locale: "es_AR",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "David López, desarrollador full-stack" }],
     type: "website",
   },
+  // Sin title/description: X cae a los og:* de cada página.
   twitter: {
     card: "summary_large_image",
-    title: "David Lopez Dev",
-    description:
-      "Portfolio técnico con impacto real. Desde APIs hasta UI modular.",
-    images: ["/android-chrome-192x192.png"],
     creator: "@dlopezmathez",
   },
 };
@@ -78,16 +66,29 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <head>
-      
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "David Lopez Dev",
-              url: "https://www.davidlopezdev.com.ar",
-              logo: "https://www.davidlopezdev.com.ar/android-chrome-192x192.png",
+              "@type": "Person",
+              name: "David López",
+              jobTitle: "Desarrollador full-stack",
+              url: "https://davidlopezdev.com.ar",
+              image: "https://davidlopezdev.com.ar/android-chrome-192x192.png",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Mendoza",
+                addressCountry: "AR",
+              },
+              knowsAbout: [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "FastAPI",
+                "PostgreSQL",
+                "Firebase",
+              ],
               sameAs: [
                 "https://www.linkedin.com/in/david-lopez-mathez/",
                 "https://github.com/cubo1991",

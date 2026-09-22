@@ -63,11 +63,11 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                         <h3>Información de Contacto</h3>
                         <div className="contact-item">
                             <span>📧 Email:</span>
-                            <p>adavidlopezmathez@gmail.com</p>
+                            <p><a href="mailto:adavidlopezmathez@gmail.com">adavidlopezmathez@gmail.com</a></p>
                         </div>
                         <div className="contact-item">
                             <span>📱 Teléfono:</span>
-                            <p>+54 261 664 9039</p>
+                            <p><a href="tel:+542616649039">+54 261 664 9039</a></p>
                         </div>
                         <div className="contact-item">
                             <span>📍 Ubicación:</span>
@@ -118,7 +118,8 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                         {error && (
                             <p className="form-error" role="alert">
                                 No pudimos enviar tu mensaje. Escribime directo a
-                                {' '}adavidlopezmathez@gmail.com o al +54 261 664 9039.
+                                {' '}<a href="mailto:adavidlopezmathez@gmail.com">adavidlopezmathez@gmail.com</a>
+                                {' '}o al <a href="tel:+542616649039">+54 261 664 9039</a>.
                             </p>
                         )}
 
